@@ -47,7 +47,7 @@ while final.status != "ACTIVE":
  final = [img for img in cs.images.list() if nm in img.name][0]
 
 print "\nThe image build is complete, now creating server from that image: \n"
-name = 'from_'+nm
+name = 'from_image_'+nm
 server = cs.servers.create(name,final.id,'3')
 pas = server.adminPass
 print 'Server is spun-up. Please wait for its network to be set up. \n'
