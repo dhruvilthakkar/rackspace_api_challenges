@@ -33,7 +33,6 @@ print "Creating a database instance with name %s flavor %d and size %d GB" % (nm
 instance = cdb.create(nm, flavor=selected, volume=sz)
 id=instance.id
 
-print type(instance.status)
 while instance.status != "ACTIVE":
  print "Please wait while the instance is being build:"
  time.sleep(15)
