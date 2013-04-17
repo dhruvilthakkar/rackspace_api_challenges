@@ -40,6 +40,6 @@ for i in xrange(0,3):
     print "Here are logins for server %s" % (servers[i].name)
     print "ID:", servers[i].id
     print "Status:", servers[i].status
-    print "Admin password:", pas[0]
+    print "Admin password:", pas[i]
     print servers[i].networks
     print "#######################"
