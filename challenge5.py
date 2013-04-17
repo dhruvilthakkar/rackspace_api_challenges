@@ -31,10 +31,6 @@ sz = int(raw_input("Enter the volume size in GB (1-50): "))
 print "Creating a database instance with name %s flavor %d and size %d GB" % (nm, flav, sz)
 
 instance = cdb.create(nm, flavor=selected, volume=sz)
-print "Instance Name:", instance.name
-print "Instance ID:", instance.id
-print "Instance Status:", instance.status
-
 id=instance.id
 
 print type(instance.status)
@@ -44,9 +40,9 @@ while instance.status != "ACTIVE":
  instance = cdb.get(id)
 
 print "\nInstance is build, here are the details:"
-print instance.status
-print instance.name
-print instance.id
+print "Instance Name:", instance.name
+print "Instance ID:", instance.id
+print "Instance Status:", instance.status
 
 print "\nInstance is created, lets create database"
 
@@ -55,7 +51,7 @@ while name == '':
     print "Please enter some name for database"
     name = raw_input("Please enter the name of the database: ")
 db = instance.create_database(name)
-print "Database instance %s is created" %(db.name)
+print "Database %s is created" %(db.name)
 #print db
 
 username = raw_input("Instance is created, database is created, please enter a username: ")
