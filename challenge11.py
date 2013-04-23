@@ -155,6 +155,7 @@ def create_servers():
     print "Domain is created\n"
     print recs
     
+    print "Here are the details for 3 servers:\n"
     for i in xrange(0,3):
         print "Server Name: ",servers[i].name
         print "Admin Password: ", pas[i]
