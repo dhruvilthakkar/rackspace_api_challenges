@@ -140,7 +140,7 @@ def create_servers():
     ip = lb.virtual_ips[0].address
     
     try:
-            dom = dns.create(name="dhruvilthakkar15.com", emailAddress="abc@example.edu",
+            dom = dns.create(name="dhruvilthakkar17.com", emailAddress="abc@example.edu",
                     ttl=900, comment="sample domain")
     except exc.DomainCreationFailed as e:
             print "Domain creation failed:", e
@@ -148,7 +148,7 @@ def create_servers():
     print
     
     a_rec = {"type": "A",
-            "name": "dhruvilthakkar.com",
+            "name": "dhruvilthakkar17.com",
             "data": ip,
             "ttl": 6000}
     recs = dom.add_records([a_rec])
