@@ -3,7 +3,7 @@
 import requests
 from werkzeug import MultiDict
 
-with open('/Users/dhru4670/.mailgunapi','r') as f:
+with open('/.mailgunapi','r') as f:
     key=f.readline()
 print "key is: "+ key
 def create_route():
